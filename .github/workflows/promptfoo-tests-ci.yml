@@ -54,10 +54,10 @@ jobs:
 
       - name: Run PromptFoo classify evaluation
         working-directory: promptfoo-tests
-        # run: npx promptfoo@latest eval -c classify.yaml
-        run: |
-          mkdir -p .
-          npx promptfoo@latest eval -c classify.yaml
+        run: npx promptfoo@latest eval -c classify.yaml
+        # run: |
+        #   mkdir -p .
+        #   npx promptfoo@latest eval -c classify.yaml
 
       - name: Run PromptFoo sentiment evaluation
         working-directory: promptfoo-tests
