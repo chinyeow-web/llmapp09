@@ -52,7 +52,8 @@ class MetricsStore:
 
             data["records"].append(
                 {
-                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    # "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "timestamp": datetime.now(UTC).isoformat()
                     "task_type": task_type,
                     "model": model,
                     "input_tokens": input_tokens,
@@ -85,7 +86,8 @@ class MetricsStore:
 
             data["records"].append(
                 {
-                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    # "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "timestamp": datetime.now(UTC).isoformat()
                     "task_type": task_type,
                     "model": model,
                     "latency_seconds": round(latency_seconds, 4),
@@ -126,7 +128,8 @@ class MetricsStore:
 
             data["records"].append(
                 {
-                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    # "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "timestamp": datetime.now(UTC).isoformat()
                     "event_type": event_type,
                     "task_type": task_type,
                     "input_text_snippet": input_text_snippet[:200],
